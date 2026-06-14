@@ -44,11 +44,16 @@ Exemple:
 
 
 def count_fruits(fruits_list):
-    # Write here your code
-    pass
+    counter={}
+    for fruit in fruits:
+        if fruit in counter:
+            counter[fruit] +=1
+        else:
+            counter[fruit]=1
+    return counter
+
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-
-# fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
-# print(count_fruits(fruits))
+#fruits = ['apple', 'banana', 'orange', 'apple', 'kiwi', 'banana', 'kiwi', 'kiwi', 'kiwi']
+#print(count_fruits(fruits))
