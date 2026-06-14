@@ -37,8 +37,16 @@ Exemple:
 
 
 def descending_list_iterator(numbers_list):
-    # Write here your code
-    pass
+    lista_ordenada=[]
+    
+    for i in range (len(numbers_list)):
+        mayor = numbers_list[0]
+        for number in numbers_list:
+            if number > mayor:
+                mayor = number
+        numbers_list.remove(mayor)
+        lista_ordenada.append(mayor)
+    return iter(lista_ordenada)
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
