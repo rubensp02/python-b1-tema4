@@ -30,7 +30,7 @@ Enunciat:
 
 
 def add_elapsed_time(dictionary, key, value):
-    my_dict.update({key:value})
+    dictionary.update({key:value})
     return dictionary
 
 
