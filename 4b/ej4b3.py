@@ -70,14 +70,18 @@ import random
 
 def create_list(length_list):
     total=[]
-    for i in range (length_list):
-        total.append(random.randint(0,100))
-
-    return total
-
+    if length_list > 0:
+        for i in range (length_list):
+            total.append(random.randint(0,100))
+       
+        heap_list = copy.deepcopy(total)
+        
+        return total, heap_list
+    else:
+        raise ValueError("The number must be positive")
 
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-print(create_list(6))
+print(create_list(3))
